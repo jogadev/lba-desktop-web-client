@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @font-face {
+    font-family: RedHatDisplay-Bold;
+    src: url('./assets/fonts/RedHatDisplay-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: RedHatDisplay-Regular;
+    src: url('./assets/fonts/RedHatDisplay-Regular.ttf');
+    font-weight: normal;
+    font-style: italic;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: RedHatDisplay-Medium;
+    src: url('./assets/fonts/RedHatDisplay-Medium.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RedHatDisplay-Medium;
+    src: url('./assets/fonts/RedHatDisplay-MediumItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: RedHatDisplay-Bold;
+    src: url('./assets/fonts/RedHatDisplay-Bold.ttf');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RedHatDisplay-Bold;
+    src: url('./assets/fonts/RedHatDisplay-BoldItalic.ttf');
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.font-rhd-rg{
+    font-family: "RedHatDisplay-Regular"
+}
+
+.font-rhd-md{
+    font-family: "RedHatDisplay-Medium";
+}
+
+.font-rhd-bl{
+    font-family: "RedHatDisplay-Bold";
+}
+
+html, body, #root{
+    height: 100%;
 }
