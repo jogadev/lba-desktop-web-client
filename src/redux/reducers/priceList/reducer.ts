@@ -1,18 +1,20 @@
 import { PriceListItem } from "./types"
-import { UPDATE_LIST, ACTIVATE_FILTER, CLEAR_FILTER } from "./actions";
+import { UPDATE_LIST, ACTIVATE_FILTER, CLEAR_FILTER, HIDE_LIST } from "./actions";
 
 interface PriceListData {
-    items: PriceListItem[],
-    activeFilter: string 
+    items: any[], // TODO: type this.
+    activeFilter: string,
+    showingItems: boolean 
 }
 
 const initialState: PriceListData = {
     items: [],
-    activeFilter: ""
+    activeFilter: "",
+    showingItems: false
 }
 
 const handlers : any = {
-    [UPDATE_LIST]: (state: PriceListData, payload: PriceListItem[]): PriceListData => {
+    [UPDATE_LIST]: (state: PriceListData, payload: any[]): PriceListData => {
         return {
             ...state, 
             items: payload
@@ -22,14 +24,23 @@ const handlers : any = {
     [ACTIVATE_FILTER]: (state: PriceListData, payload: string): PriceListData => {
         return {
             ...state,
-            activeFilter: payload
+            activeFilter: payload,
+            showingItems: true
         }
     },
 
     [CLEAR_FILTER]: (state: PriceListData) : PriceListData => {
         return {
             ...state,
-            activeFilter: ""
+            activeFilter: "",
+        }
+    },
+
+    [HIDE_LIST]: (state: PriceListData) : PriceListData => {
+        return {
+            ...state,
+            activeFilter: "",
+            showingItems: false
         }
     }
 };

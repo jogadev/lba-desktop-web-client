@@ -3,6 +3,7 @@ interface PillButtonProps {
     onClick():void,
     icon?: string,
     active?: boolean
+    extraProps?: any
 }
 
 export default function PillButton(props: PillButtonProps){
@@ -22,7 +23,11 @@ export default function PillButton(props: PillButtonProps){
     
 
     return (
-        <button onClick={props.onClick} className={`bg-zinc-300 px-2 py-2 rounded-3xl flex flex-row items-center ${borderStyle} m-1`}>
+        <button 
+            onClick={props.onClick} 
+            className={`bg-zinc-300 px-2 py-2 rounded-3xl flex flex-row items-center ${borderStyle} m-1`}
+            {...props.extraProps}
+        >
             {icon}
             <p className={`font-rhd-rg text-md ${textBorder} whitespace-nowrap`}>{props.label}</p>
         </button>

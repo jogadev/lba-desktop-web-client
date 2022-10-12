@@ -1,0 +1,1013 @@
+Received: from CO6PR14MB4290.namprd14.prod.outlook.com (2603:10b6:5:347::15)
+ by SA1PR14MB4610.namprd14.prod.outlook.com with HTTPS; Tue, 17 Aug 2021
+ 16:11:21 +0000
+Received: from SA9PR11CA0007.namprd11.prod.outlook.com (2603:10b6:806:6e::12)
+ by CO6PR14MB4290.namprd14.prod.outlook.com (2603:10b6:5:347::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4415.17; Tue, 17 Aug
+ 2021 16:11:20 +0000
+Received: from SN1NAM02FT0013.eop-nam02.prod.protection.outlook.com
+ (2603:10b6:806:6e:cafe::f8) by SA9PR11CA0007.outlook.office365.com
+ (2603:10b6:806:6e::12) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4415.16 via Frontend
+ Transport; Tue, 17 Aug 2021 16:11:20 +0000
+Authentication-Results: spf=pass (sender IP is 54.240.27.63)
+ smtp.mailfrom=us-west-2.amazonses.com; outlook.com; dkim=pass (signature was
+ verified) header.d=cyberpuerta.mx;outlook.com; dmarc=pass action=none
+ header.from=cyberpuerta.mx;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of us-west-2.amazonses.com
+ designates 54.240.27.63 as permitted sender) receiver=protection.outlook.com;
+ client-ip=54.240.27.63; helo=a27-63.smtp-out.us-west-2.amazonses.com;
+Received: from a27-63.smtp-out.us-west-2.amazonses.com (54.240.27.63) by
+ SN1NAM02FT0013.mail.protection.outlook.com (10.97.4.188) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.4415.16 via Frontend Transport; Tue, 17 Aug 2021 16:11:19 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:9543BD93771DDB87F4ED474D4B2776D5CB18B8A4394EA913430AE3FC61C9F3CA;UpperCasedChecksum:F6632C016E60ED427E1963FAEE884ED8A55C06CF3CB80F6DEA0314E651A6D97F;SizeAsReceived:1407;Count:11
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=m4wzc4tgpxucrmmsm5ft4hs2mgghrav2; d=cyberpuerta.mx; t=1629216679;
+	h=To:From:Date:Subject:MIME-Version:Content-type:Message-ID;
+	bh=pRj5/mvQlgCPPtMT4bU0wLXB1aU7mroQEIPjVzmax2E=;
+	b=Er8cNHD1TexCI5kFbQwez50BpsCTlmCTqme/6gGpSBeUDWPzCeNzYCpSBHQOe0zx
+	i0CTNqg6Kw19Bznht1hwEYLmajOHbjDpN/ksq3bfHjhg3Oz9/SL+2KOMIm9OPBR+PgU
+	A4oPRuBjScoFxWHR6ZSCGKr+CZRGiEWefHpyXd28=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1629216679;
+	h=To:From:Date:Subject:MIME-Version:Content-type:Message-ID:Feedback-ID;
+	bh=pRj5/mvQlgCPPtMT4bU0wLXB1aU7mroQEIPjVzmax2E=;
+	b=PekOxsddnG+QJ0xUfftJGWLWzx9DMmOGeYHmOCqFo+9RJ+dM+LCCzfvZ0mwK1OQL
+	2gcx8ikoIyxnUgmF1d9coA8czeUqa/m7KKJj9ewkBUDEAStJkubCKNw0s16v4KUjoVg
+	OkXqM8Ad2P6Q5AYXxlFxsyLYarTgRMwui/gDioQ0=
+To: =?UTF-8?B?Sm9yZ2UgR2FyY2lhIA==?= <jogadev@outlook.com>
+From: =?UTF-8?B?Q3liZXJwdWVydGEubXgg?= <info@cyberpuerta.mx>
+Date: Tue, 17 Aug 2021 16:11:19 +0000
+Subject: =?UTF-8?B?RmFjdHVyYSBlbWl0aWRhIChDUDE2OTI4MDEpIA==?=
+Content-type: Multipart/Mixed; boundary="1134301278611bdfa6ef2b3"
+Message-ID: <0101017b54e1a5e7-6552cbe8-9da6-48a8-8994-af012137f3eb-000000@us-west-2.amazonses.com>
+Feedback-ID: 1.us-west-2.rfWuf8t/y2izKxh7W7HXdvSfc8/dxebr74W8lor1o3g=:AmazonSES
+X-SES-Outgoing: 2021.08.17-54.240.27.63
+X-IncomingHeaderCount: 11
+Return-Path:
+ 0101017b54e1a5e7-6552cbe8-9da6-48a8-8994-af012137f3eb-000000@us-west-2.amazonses.com
+X-MS-Exchange-Organization-ExpirationStartTime: 17 Aug 2021 16:11:19.9603
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 78f31ad6-b89c-4c0b-b668-08d96199a66b
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM02FT0013.eop-nam02.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 8/17/2021 3:59:44 PM
+X-MS-Office365-Filtering-Correlation-Id: 78f31ad6-b89c-4c0b-b668-08d96199a66b
+X-MS-TrafficTypeDiagnostic: CO6PR14MB4290:
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 54.240.27.63
+X-SID-PRA: INFO@CYBERPUERTA.MX
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-MS-Exchange-Organization-SCL: 0
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 17 Aug 2021 16:11:19.6974
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 78f31ad6-b89c-4c0b-b668-08d96199a66b
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ SN1NAM02FT0013.eop-nam02.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO6PR14MB4290
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8997016
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.4415.024
+X-Microsoft-Antispam-Mailbox-Delivery:
+	abwl:0;wl:0;pcwl:0;kl:0;iwl:0;ijl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000282)(90000117)(90012020)(91020020)(91040095)(91045095)(9050020)(9100335)(5061607266)(5061608174)(4900115)(2008001114)(2008000189)(4920090)(6515079)(4950131)(4990090);
+X-Message-Info:
+	5vMbyqxGkddD6nDA0/UkOs4KkCuViMDUaxavcDn6umz/fLbpY+lL6ctsy6t1npjoisjZwCzDABambg83OhGyWYhqPwQU7jCnDfwDh9APioobRfKswLGae99/dT5rWyrjXd971czHztObHpUCgfYfwHqE6y0ijLroBK8K0WZcESy8CrcNQVecY8Q51db0OuM0S45SeCpLmXT8+q66TH//Dw==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MTtHRD0xO1NDTD0z
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?aU1sNkZidGk1aXpNeXhadmgxaXFLeXgrNHE2T2VPeE1SOTNHQUNTMzh1Znh5?=
+ =?utf-8?B?K2gvbVhvbWdYUzd6and0djdQZlAyckhJR2VCZE5sVFBTTGd1eEZUK09hK3RJ?=
+ =?utf-8?B?VkZVWjJsaW1Qa1VWeGdJTVZsQ2M3WnBoamhOVzBjSDlGVGJLN0tHVzBQblJ0?=
+ =?utf-8?B?UHZTMTZkbUl3VmcrWllXTE9EMk1admRFSXhSbmNJVGNreWoxTXQwOElGY2pp?=
+ =?utf-8?B?cjVGSThQZlY1TFNuU0FabG5CODBaVjVPYndqMjJUdUtUb3cxWWczMVYzZUdm?=
+ =?utf-8?B?U3ZzQWJMYkZvZEdlY3ljaG1neXJZNVRYRmZla0FaTk5aOGt3UjZLdGlRM0JO?=
+ =?utf-8?B?SjZhM1lHRUJvU2lWLzZ4QzhSSlBIVU9qTGRNZ1NZMEFJOUtYSjM0TG95NGRZ?=
+ =?utf-8?B?R1NwS08vMUpBalg4RlVObW5wMU4xWHVNNVVGS2c3Q3plTTNPZW5MRGtLV1BS?=
+ =?utf-8?B?QkdLeWxTNXdyeVlkQkVrRXZVcEVJSUlxaFlyc29Tek1xc29VcWhXanpZWUJK?=
+ =?utf-8?B?SEczZDlpaFpNRHY1Q3NTeGgvK2VwL1F2WXZ6OWJuZmZjc2tCTHg3b1lodUpw?=
+ =?utf-8?B?M0wrWkRNTzc3Nm1GSEhaVXc1QmJCQnNvNnBpcDBucUlHanJhaytKNVNwa2RC?=
+ =?utf-8?B?R3cwRy9RcmR0MmEyNTVwelVkMUlTYjNBMDdKcXhncVBTQ3FVWDdET0Nnd3d0?=
+ =?utf-8?B?Mjh3NkNQdEhEbU1TZzlXeFpseWFaRlN5ZStQclg3RDR6am1xa242RlY4Sncy?=
+ =?utf-8?B?SlZQM1p2WTliRmUrRlJKNFlwRTY3RmFsbHRybVk1QmY2dEpmRTg1ODRXYklu?=
+ =?utf-8?B?VEhNNGNhMXZ3T1IvUXlNa3FZaDVpUDdlS1I5SmRpUUlyWS9MTFVnaEhTb0ZJ?=
+ =?utf-8?B?Y28xU1l1eHE1ZTdHV1EvODB0MDgyRUN6TkZQRHUzZWUyV2k3eGFIV2RVNDVQ?=
+ =?utf-8?B?Rnppc2RDNG1hZExBUUVuVWFKdjVaZUNnaXkxME1OT1BTRVdMcUwrUkRhRVNL?=
+ =?utf-8?B?anNLVEFpa1JRekVWS25GUUIwSnkrT29zckhNd05ZYndUSUJBcnhMbVQ0bXAr?=
+ =?utf-8?B?c1pDQjB4OCtibjFoYm5yU0dsNDN4dEpaSGp0Rm5IV0hiOEwyRWc3aU0yTUk4?=
+ =?utf-8?B?cGpLSnlFd2RhbDlhRUhKcHBkNmFab0hXYUR5NDNRMFpRNVpIQ1R2RmFoN3BR?=
+ =?utf-8?B?K3ZmK0RjNUFuUXJ5aU1sb0x2Q2RmOHk1VEYxSkloQ2tMOWt4TU9xN2JIbHV3?=
+ =?utf-8?B?em1TblpEYi9yQ1B4OG01N05tMWN5TnFUVVgrR1h6WXBPZmtxMG9lRE9MbGZv?=
+ =?utf-8?B?SjhrenpydnZock8wUkVxem52VnJnUTYrVlZ5NFB0eWx4eWsxSnU3dnlPOHpW?=
+ =?utf-8?B?NEZVWFBJOHR6WWw5cmhJZkhXVlQ0SHhwcDBDeGtEcjltVDVkckNwNjJVU0hq?=
+ =?utf-8?B?NHp1bGZJUldBbG00dGZoTGtYWGE4L2tnZEJ6eG92T0xpV0FORUtQWlZCdlds?=
+ =?utf-8?B?UURyWWVITDQ2ZVhJYVRHZlRqRklhaTEvR2RaMWtZVDlKemhpUWdDZEJMWDNh?=
+ =?utf-8?Q?HwGZnMWMxdSZI6sL81D94ZDxw=3D?=
+MIME-Version: 1.0
+
+--1134301278611bdfa6ef2b3
+Content-type: Multipart/Alternative;boundary="alt-1134301278611bdfa6ef2b3"
+
+--alt-1134301278611bdfa6ef2b3
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body><div style="display:none !important; visibility:hidden; mso-hide:all; font-size:1px; color:#ffffff; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden;">Descargar tu factura en los formatos XML y PDF</div><img style="display:none;" src="http://track.cyberpuerta.mx/?track=970611bdfa6d0c31"><table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f6f6f6"><tr><td style="font-size:0;">&nbsp;</td><td align="center" valign="middle" width="600" height="300" bgcolor="#f6f6f6"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF; border: solid 1px #DDDDDD; margin-top: 16px; border-radius: 8px 8px 0px 0px">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center;
+                                           line-height: 24px;
+                                           vertical-align: middle;
+                                           font-size: 12px;
+                                           " colspan="2">
+                                    <a style="
+                                              color: #AAAAAA;
+                                              " href="http://track.cyberpuerta.mx/?view=970611bdfa6d0c31&amp;utm=invoicecreated">Ver correo en browser</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;
+                                           line-height: 24px;
+                                           vertical-align: middle;
+                                           font-size: 16px;
+                                           background-color: #0066BB;
+                                           color: #FFF;
+                                           " colspan="2">
+                                    <a style="color: #FFF; text-decoration: none;" href="http://track.cyberpuerta.mx/Nuevos-articulos/?uh=620f45eb832468ebcf162ce450057e33&amp;utm=invoicecreated&amp;cpemail=970611bdfa6d0c31">Nuevos</a> ·
+                                    <a style="color: #FFF; text-decoration: none;" href="http://track.cyberpuerta.mx/Las-mejores-ofertas/?uh=620f45eb832468ebcf162ce450057e33&amp;utm=invoicecreated&amp;cpemail=970611bdfa6d0c31">Promociones</a> ·
+                                    <a style="color: #FFF; text-decoration: none;" href="http://track.cyberpuerta.mx/mi-cuenta/?uh=620f45eb832468ebcf162ce450057e33&amp;utm=invoicecreated&amp;cpemail=970611bdfa6d0c31">Mi cuenta</a>
+                                </td>
+                            </tr>
+                            <tr style="">
+                                <td style="text-align: left;
+                                           height: 64px;
+                                           padding: 12px 0px 4px 16px;
+                                           ">
+                                    <a href="http://track.cyberpuerta.mx/?utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="text-decoration: none;"><img src="http://www.cyberpuerta.mx/out/email/assets/CP-logo@2x.png" height="48"></a>
+                                </td>
+                                <td style="text-align: right;
+                                           height: 64px;
+                                           color: #666666;
+                                           padding: 0px 16px;
+                                           " valign="middle">
+                                    Pedido<br>
+                                    <a href="http://track.cyberpuerta.mx/historial-de-pedidos/?uh=620f45eb832468ebcf162ce450057e33&amp;orderNr=CP1692801&amp;utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="text-decoration: none; font-size: 20px; line-height: 24px; color: #0066BB;">CP1692801</a>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table><!-- MESSAGE START -->
+                    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF; border-bottom: solid 1px #DDDDDD; border-right: solid 1px #DDDDDD; border-left: solid 1px #DDDDDD;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;
+                                           line-height: 24px;
+                                           vertical-align: middle;
+                                           font-size: 16px;
+                                           padding: 16px;
+                                           ">
+                                    <h2 style="
+                                               margin-top: 0px;
+                                               margin-bottom: 8px;
+                                               color: #FF9800;
+                                               ">Factura emitida</h2>
+                                    
+                                    <p style="
+                                              margin: 0px;
+                                              color: #666666;
+                                              ">
+                                        A continuación podrás descargar tu factura en los formatos XML y PDF que además hemos anexado en este correo para tu comodidad.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- MESSAGE END -->
+                    
+                    <!-- CTA START -->
+                    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF; border-bottom: solid 1px #DDDDDD; border-right: solid 1px #DDDDDD; border-left: solid 1px #DDDDDD;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center;
+                                           line-height: 24px;
+                                           vertical-align: middle;
+                                           font-size: 16px;
+                                           padding: 32px;
+                                           ">
+                                    <a href="http://track.cyberpuerta.mx?cl=account_order&amp;uh=620f45eb832468ebcf162ce450057e33&amp;cporderlistuser=dc5c858e2bf374522649c7ec5563f4cc&amp;evt=invmodal&amp;order=4521ec30741e1e0c331204ca186d1080&amp;utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="
+                                                      text-decoration: none;
+                                                      padding: 16px;
+                                                      border-radius: 4px;
+                                                      background-color: #06B;
+                                                      font-size: 16px;
+                                                      font-weight: bold;
+                                                      color: white;
+                                                      box-shadow: 0px 4px 8px RGBA(0,0,0, 0.1)
+                                                      ">
+                                        Descargar factura
+                                    </a>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- CTA END -->
+                     
+                    <!-- STATUS START -->
+                    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF; border-bottom: solid 1px #DDDDDD; border-right: solid 1px #DDDDDD; border-left: solid 1px #DDDDDD;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;
+                                           line-height: 24px;
+                                           vertical-align: middle;
+                                           font-size: 16px;
+                                           padding: 16px;
+                                           ">
+                                    <h3 style="
+                                               margin-top: 0px;
+                                               margin-bottom: 0px;
+                                               color: #FF9800;
+                                               ">Pedido
+                                    </h3>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- STATUS END -->
+                    
+                    <!-- PRODUCT LIST START -->
+                    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF; border-bottom: solid 1px #DDDDDD; border-right: solid 1px #DDDDDD; border-left: solid 1px #DDDDDD;">
+                        <tbody>
+                            <tr style="color: #FF9800;">
+                                <td></td>
+                                <td style="padding-top: 16px">Producto</td>
+                                <td style="text-align: right; padding: 16px 16px 8px 16px">Total</td>
+                            </tr>
+                            <tr valign="top">
+                                <td style="
+                                           width: 80px;
+                                           padding: 0px 16px 16px 16px;
+                                           ">
+                                    <img src="https://www.cyberpuerta.mx/img/product/S/CP-CORSAIR-CH-910D019-SP-1.jpg" width="80">
+                                </td>
+                                <td style="
+                                           font-size: 14px;
+                                           line-height: 16px;
+                                           
+                                           ">
+                                    <p style="margin: 0px 0px 8px 0px;">
+                                        <a href="http://track.cyberpuerta.mx/index.php?cl=details&amp;anid=c0cd636770aa2a3a6386deecfa5415d2&amp;uh=620f45eb832468ebcf162ce450057e33&amp;utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="
+                                                           font-size: 16px;
+                                                           line-height: 20px;
+                                                           text-decoration: none;
+                                                           color: #0066BB
+                                                           ">
+                                        <span style="font-weight: bold">1x </span>
+                                            Teclado Gamer Corsair K60 RGB Pro, Teclado Mecánico, Cherry Viola, Alámbrico, USB (Español)
+                                        </a>
+                                    </p>
+                                    <span style="color: #9A9A9A;">CH-910D019-SP</span>
+                                </td>
+                                <td style="
+                                           width: 96px;
+                                           padding: 0px 16px;
+                                           text-align: right;
+                                           font-size: 16px;
+                                           line-height: 20px;
+                                           font-weight: bold;
+                                           color: #666666;
+                                           ">
+                                    $1,459.00
+                                </td>
+                            </tr><tr valign="top">
+                                <td style="
+                                           width: 80px;
+                                           padding: 0px 16px 16px 16px;
+                                           ">
+                                    <img src="https://www.cyberpuerta.mx/img/product/S/CP-LOGITECH-960-001363-1.jpg" width="80">
+                                </td>
+                                <td style="
+                                           font-size: 14px;
+                                           line-height: 16px;
+                                           
+                                           ">
+                                    <p style="margin: 0px 0px 8px 0px;">
+                                        <a href="http://track.cyberpuerta.mx/index.php?cl=details&amp;anid=c5b9f0507020a271a4d3205d000084ff&amp;uh=620f45eb832468ebcf162ce450057e33&amp;utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="
+                                                           font-size: 16px;
+                                                           line-height: 20px;
+                                                           text-decoration: none;
+                                                           color: #0066BB
+                                                           ">
+                                        <span style="font-weight: bold">1x </span>
+                                            Logitech Webcam C505, 720p, 1280 x 720 Pixeles, USB, Negro
+                                        </a>
+                                    </p>
+                                    <span style="color: #9A9A9A;">960-001363</span>
+                                </td>
+                                <td style="
+                                           width: 96px;
+                                           padding: 0px 16px;
+                                           text-align: right;
+                                           font-size: 16px;
+                                           line-height: 20px;
+                                           font-weight: bold;
+                                           color: #666666;
+                                           ">
+                                    $659.00
+                                </td>
+                            </tr><tr valign="top">
+                                <td style="
+                                           width: 80px;
+                                           padding: 0px 16px 16px 16px;
+                                           ">
+                                    <img src="https://www.cyberpuerta.mx/img/product/S/CP-MICROSOFT-ELG-00011-1.jpg" width="80">
+                                </td>
+                                <td style="
+                                           font-size: 14px;
+                                           line-height: 16px;
+                                           
+                                           ">
+                                    <p style="margin: 0px 0px 8px 0px;">
+                                        <a href="http://track.cyberpuerta.mx/index.php?cl=details&amp;anid=32824e5ef60d97e9de00896b80d5eb85&amp;uh=620f45eb832468ebcf162ce450057e33&amp;utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="
+                                                           font-size: 16px;
+                                                           line-height: 20px;
+                                                           text-decoration: none;
+                                                           color: #0066BB
+                                                           ">
+                                        <span style="font-weight: bold">1x </span>
+                                            Mouse Microsoft BlueTrack Arc, 2 Botones, Inalámbrico, Bluetooth, Negro
+                                        </a>
+                                    </p>
+                                    <span style="color: #9A9A9A;">ELG-00011</span>
+                                </td>
+                                <td style="
+                                           width: 96px;
+                                           padding: 0px 16px;
+                                           text-align: right;
+                                           font-size: 16px;
+                                           line-height: 20px;
+                                           font-weight: bold;
+                                           color: #666666;
+                                           ">
+                                    $1,179.00
+                                </td>
+                            </tr>
+                         
+                        </tbody>
+                    </table>
+                    
+                    <!-- PRODUCT LIST END -->
+    
+                    <!-- SUMMARY START -->
+                    
+                    <!-- SUMMARY START -->
+                    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF; border-bottom: solid 1px #DDDDDD; border-right: solid 1px #DDDDDD; border-left: solid 1px #DDDDDD;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center;
+                                           border-right: solid 1px #DDDDDD;
+                                           padding: 16px;
+                                           " width="268">
+                                    <img src="https://www.cyberpuerta.mx/out/email/assets/norton@2x.png" height="64" style="margin-right: 8px">
+                                    <img src="https://www.cyberpuerta.mx/out/email/assets/aimx@2x.png" height="64">
+                                </td>
+                                <td style="text-align: right;
+                                           line-height: 24px;
+                                           vertical-align: middle;
+                                           font-size: 16px;
+                                           ">
+                                    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; padding: 16px; border-bottom: solid 1px #DDDDDD;">
+                                        <tbody>
+                                            <tr style="height: 24px">
+                                                <td style="
+                                                           font-size: 14px;
+                                                           color: #FF9800;
+                                                           " width="136">16% IVA incluído</td>
+                                                <td style="
+                                                           font-size: 16px;
+                                                           line-height: 20px;
+                                                           color: #666666;
+                                                           " width="50%">$454.76</td>
+                                            </tr>
+                                            <tr style="height: 24px">
+                                                <td style="
+                                                           font-size: 14px;
+                                                           color: #FF9800;
+                                                           " width="136">Total de productos</td>
+                                                <td style="
+                                                           font-size: 16px;
+                                                           line-height: 20px;
+                                                           color: #666666;
+                                                           " width="50%">$3,297.00</td>
+                                            </tr>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            <tr style="height: 24px;">
+                                                <td style="
+                                                           font-size: 14px;
+                                                           color: #FF9800;
+                                                           " width="136">Costo de envío</td>
+                                                <td style="
+                                                           font-size: 16px;
+                                                           line-height: 20px;
+                                                           color: #666666;
+                                                           " width="50%">$149.00</td>
+                                            </tr>
+                                            
+                                            
+                                            <tr style="height: 24px;">
+                                                <td style="
+                                                           font-size: 14px;
+                                                           color: #FF9800;
+                                                           " width="136">Pagos mensuales</td>
+                                                <td style="
+                                                           font-size: 16px;
+                                                           line-height: 20px;
+                                                           color: #666666;
+                                                           " width="50%">6x $574.33</td>
+                                            </tr>
+                                            
+                                            
+                                        </tbody>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; padding: 16px">
+                                        <tbody>
+                                            <tr style="height: 24px">
+                                                <td style="
+                                                           font-size: 14px;
+                                                           color: #FF9800;
+                                                           font-weight: bold;
+                                                           " width="136">Total</td>
+                                                <td style="
+                                                           font-size: 16px;
+                                                           line-height: 20px;
+                                                           font-weight: bold;
+                                                           color: #666666;
+                                                           " width="50%">$3,446.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- SUMMARY END -->
+                    
+                    <!-- SUMMARY END -->
+
+                    <!-- STATUS START -->
+                    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF; border-bottom: solid 1px #DDDDDD; border-right: solid 1px #DDDDDD; border-left: solid 1px #DDDDDD;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;
+                                           line-height: 24px;
+                                           vertical-align: middle;
+                                           font-size: 16px;
+                                           padding: 16px;
+                                           ">
+                                    <h3 style="
+                                               margin-top: 0px;
+                                               margin-bottom: 0px;
+                                               color: #FF9800;
+                                               ">Envío 
+                                    </h3>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- STATUS END -->
+                    
+                    <!-- SHIPPING+BILLING START -->
+                    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF; border-bottom: solid 1px #DDDDDD; border-right: solid 1px #DDDDDD; border-left: solid 1px #DDDDDD;">
+                        <tbody>
+                            <tr valign="top">
+                                <td style="text-align: left;
+                                           padding: 16px;
+                                           color: #FF9800;
+                                           ">
+                                    <h3 style="
+                                               margin-top: 0px;
+                                               margin-bottom: 8px;
+                                               color: #FF9800;
+                                               ">
+                                        Datos de envío
+                                    </h3>
+                                    
+                                    Enviado por
+                                    <h3 style="
+                                               margin-top: 0px;
+                                               margin-bottom: 8px;
+                                               color: #666666;
+                                               ">
+                                        Estafeta Terrestre
+                                    </h3>
+
+                                    
+                                    Destinatario
+                                    <h3 style="
+                                               margin-top: 0px;
+                                               margin-bottom: 8px;
+                                               color: #666666;
+                                               ">
+                                        Jorge Garcia Delgado
+                                    </h3>
+                                    
+                                    
+                                    Dirección
+                                    <h3 style="
+                                               margin-top: 0px;
+                                               margin-bottom: 0px;
+                                               color: #666666;
+                                               ">
+                                        Loma Linda 159 <br>
+                                        Casa azul con reja blanca<br>
+                                        Lomas del Valle<br>
+                                        58170 Morelia<br>
+                                        Michoacán de Ocampo<br>
+                                        México<br>
+                                        Tel. 4434713947<br>
+                                    </h3>
+                                </td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- SHIPPING+BILLING END -->
+                    
+                    <!-- MESSAGE START -->
+                       
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF; border-bottom: solid 1px #DDDDDD; border-right: solid 1px #DDDDDD; border-left: solid 1px #DDDDDD;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;
+                                           line-height: 24px;
+                                           vertical-align: middle;
+                                           font-size: 16px;
+                                           padding: 16px;
+                                           ">
+                                    <h4 style="
+                                               margin-top: 0px;
+                                               margin-bottom: 8px;
+                                               color: #FF9800;
+                                               ">
+                                        Modificación de datos de facturación
+                                    </h4>
+                                    <p style="
+                                              margin: 0px;
+                                              padding: 4px;
+                                              border-radius: 4px;
+                                              background-color: #F6F6F6;
+                                              font-size: 14px;
+                                              color: #666666;
+                                              line-height: 16px;
+                                              ">
+                                        
+                                        <span style="font-weight: bold;">Importante:</span> Tienes hasta el día <span style="font-weight: bold;">Viernes, 20 Agosto a las 09:11</span> para <a href="http://track.cyberpuerta.mx?cl=account_order&amp;uh=620f45eb832468ebcf162ce450057e33&amp;cporderlistuser=dc5c858e2bf374522649c7ec5563f4cc&amp;evt=invmodal&amp;order=4521ec30741e1e0c331204ca186d1080&amp;utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="color: #0066BB; text-decoration: none;">modificar</a> tus datos de facturación, después de esta fecha no será posible hacer cambio alguno.
+                                        
+                                    </p>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- MESSAGE END --><!-- SOCIAL START -->
+                    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF; border-bottom: solid 1px #DDDDDD; border-right: solid 1px #DDDDDD; border-left: solid 1px #DDDDDD;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center;
+                                           vertical-align: middle;
+                                           padding: 16px;
+                                           ">
+                                    <a href="https://es-la.facebook.com/Cyberpuerta.mx/?utm=invoicecreated" style="text-decoration: none;"><img src="http://www.cyberpuerta.mx/out/email/assets/fb@2x.png" width="40" style="margin: 0px 8px;"></a>
+                                    <a href="https://twitter.com/cyberpuerta?utm=invoicecreated" style="text-decoration: none;"><img src="http://www.cyberpuerta.mx/out/email/assets/tw@2x.png" width="40" style="margin: 0px 8px;"></a>
+                                    <a target="_blank" href="https://wa.me/5213347371360?utm=invoicecreated" style="text-decoration: none;"><img src="http://www.cyberpuerta.mx/out/email/assets/whats.png" width="40" style="margin-left: 4px;"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- SOCIAL END -->
+    
+                    <!-- FOOTER START -->
+                    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #f6f6f6; border-bottom: solid 1px #DDDDDD; border-right: solid 1px #DDDDDD; border-left: solid 1px #DDDDDD;">
+                        <tbody>
+                            <tr valign="top">
+                                <td style="
+                                           text-align: left;
+                                           padding: 16px 0px 16px 16px;
+                                           line-height: 24px;
+                                           color: #666666;
+                                           font-size: 14px;
+                                           ">
+                                    <a href="http://track.cyberpuerta.mx/?utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="
+                                                       font-size: 16px;
+                                                       color: #0066BB;
+                                                       text-decoration: none;
+                                                       ">
+                                        www.cyberpuerta.mx
+                                    </a><br>
+                                    <a href="http://track.cyberpuerta.mx/Computo-Hardware/?utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="text-decoration: none; color: #666666;">Cómputo y Hardware</a> · 
+                                    <a href="http://track.cyberpuerta.mx/Computadoras/?utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="text-decoration: none; color: #666666;">Computadoras</a><br>
+                                    <a href="http://track.cyberpuerta.mx/Impresion-Copiado/?utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="text-decoration: none; color: #666666;">Impresión</a> ·
+                                    <a href="http://track.cyberpuerta.mx/Audio-Video/?utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="text-decoration: none; color: #666666;">Audio / Video</a> ·
+                                    <a href="http://track.cyberpuerta.mx/Energia/?utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="text-decoration: none; color: #666666;">Energía</a><br>
+                                    <a href="http://track.cyberpuerta.mx/Seguridad-Vigilancia/?utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="text-decoration: none; color: #666666;">Seguridad y vigilancia</a> ·
+                                    <a href="http://track.cyberpuerta.mx/Software/?utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="text-decoration: none; color: #666666;">Software</a><br>
+                                    <a href="http://track.cyberpuerta.mx/Telecomunicacion/?utm=invoicecreated&amp;cpemail=970611bdfa6d0c31" style="text-decoration: none; color: #666666;">Telecomunicación</a>
+                                    
+                                    
+                                </td>
+                                <td style="
+                                           text-align: right;
+                                           line-height: 24px;
+                                           padding: 16px 16px 16px 0px;
+                                           color: #666666;
+                                           font-size: 14px;
+                                           ">
+                                    <span style="
+                                                 font-size: 16px;
+                                                 text-decoration: none;
+                                                 color: #333;
+                                                 ">
+                                        Atención a clientes
+                                    </span><br>
+                                    Guadalajara (Matriz): <span style="font-weight: bold; display: inline-block;">(33) 4737 1360</span><br>
+                                    México DF: <span style="font-weight: bold">(55) 4737 1360</span><br>
+                                    Monterrey: <span style="font-weight: bold">(81) 4737 1360</span><br>
+                                    <a href="mailto:info@cyberpuerta.mx" style="
+                                                       font-size: 16px;
+                                                       color: #0066BB;
+                                                       text-decoration: none;
+                                                       ">
+                                        info@cyberpuerta.mx
+                                    </a><br>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- FOOTER END -->
+    
+                    <!-- COPY START -->
+
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #999999; border-bottom: solid 1px #DDDDDD; border-right: solid 1px #DDDDDD; border-left: solid 1px #DDDDDD;">
+                        <tbody>
+                            <tr valign="top">
+                                <td style="
+                                           text-align: center;
+                                           padding: 4px;
+                                           line-height: 14px;
+                                           color: #DDDDDD;
+                                           font-size: 12px;
+                                           ">
+                                    Cyberpuerta S.A de C.V. · RFC: CYB080602JSA<br>
+                                    Av Chapultepec 15 Piso 25
+                                    Col. Ladrón de Guevara
+                                    44600 Guadalajara, México
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- COPY END -->
+
+                    <!-- UNSUSCRIBE START -->
+                    
+                    <!-- UNSUSCRIBE END --></td><td style="font-size:0;">&nbsp;</td></tr></table></body></html>
+
+--alt-1134301278611bdfa6ef2b3--
+
+--1134301278611bdfa6ef2b3
+Content-Type: application/octet-stream
+Content-Disposition: attachment; filename="4521ec30741e1e0c331204ca186d1080_CPFA169280101.xml"
+Content-Transfer-Encoding: base64
+
+PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiID8+CjxjZmRpOkNvbXByb2JhbnRl
+IHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHht
+bG5zOmNmZGk9Imh0dHA6Ly93d3cuc2F0LmdvYi5teC9jZmQvMyIgeHNpOnNjaGVtYUxvY2F0aW9u
+PSJodHRwOi8vd3d3LnNhdC5nb2IubXgvY2ZkLzMgaHR0cDovL3d3dy5zYXQuZ29iLm14L3NpdGlv
+X2ludGVybmV0L2NmZC8zL2NmZHYzMy54c2QiIENlcnRpZmljYWRvPSJNSUlGNXpDQ0E4K2dBd0lC
+QWdJVU1EQXdNREV3TURBd01EQTFNRFF4TXpJd05UY3dEUVlKS29aSWh2Y05BUUVMQlFBd2dnR0VN
+U0F3SGdZRFZRUUREQmRCVlZSUFVrbEVRVVFnUTBWU1ZFbEdTVU5CUkU5U1FURXVNQ3dHQTFVRUNn
+d2xVMFZTVmtsRFNVOGdSRVVnUVVSTlNVNUpVMVJTUVVOSlQwNGdWRkpKUWxWVVFWSkpRVEVhTUJn
+R0ExVUVDd3dSVTBGVUxVbEZVeUJCZFhSb2IzSnBkSGt4S2pBb0Jna3Foa2lHOXcwQkNRRVdHMk52
+Ym5SaFkzUnZMblJsWTI1cFkyOUFjMkYwTG1kdllpNXRlREVtTUNRR0ExVUVDUXdkUVZZdUlFaEpS
+RUZNUjA4Z056Y3NJRU5QVEM0Z1IxVkZVbEpGVWs4eERqQU1CZ05WQkJFTUJUQTJNekF3TVFzd0NR
+WURWUVFHRXdKTldERVpNQmNHQTFVRUNBd1FRMGxWUkVGRUlFUkZJRTFGV0VsRFR6RVRNQkVHQTFV
+RUJ3d0tRMVZCVlVoVVJVMVBRekVWTUJNR0ExVUVMUk1NVTBGVU9UY3dOekF4VGs0ek1Wd3dXZ1lK
+S29aSWh2Y05BUWtDRTAxeVpYTndiMjV6WVdKc1pUb2dRVVJOU1U1SlUxUlNRVU5KVDA0Z1EwVk9W
+RkpCVENCRVJTQlRSVkpXU1VOSlQxTWdWRkpKUWxWVVFWSkpUMU1nUVV3Z1EwOU9WRkpKUWxWWlJV
+NVVSVEFlRncweU1EQTJNRFV4TlRReU16ZGFGdzB5TkRBMk1EVXhOVFF5TXpkYU1JRzFNUjB3R3dZ
+RFZRUURFeFJEV1VKRlVsQlZSVkpVUVNCVFFTQkVSU0JEVmpFZE1Cc0dBMVVFS1JNVVExbENSVkpR
+VlVWU1ZFRWdVMEVnUkVVZ1ExWXhIVEFiQmdOVkJBb1RGRU5aUWtWU1VGVkZVbFJCSUZOQklFUkZJ
+RU5XTVNVd0l3WURWUVF0RXh4RFdVSXdPREEyTURKS1UwRWdMeUJUUlVGT09EWXdPREUxTkVFeE1S
+NHdIQVlEVlFRRkV4VWdMeUJUUlZoQk9EWXdPREUxU0U1RlExaE9NRGN4RHpBTkJnTlZCQXNUQmsx
+QlZGSkpXakNDQVNJd0RRWUpLb1pJaHZjTkFRRUJCUUFEZ2dFUEFEQ0NBUW9DZ2dFQkFKL2ZRUjVK
+NUlva3liRUNTSDk3UXozRHlHTGNOSTZ1VXFJTGRMazZXS1ZYNlpZZmZ1WFJ6MWJzM2QxVld4RkNj
+VVVncUtTQ2hiQWNxY1owRTFESlJRYVQvSStJUERMSFhwNnpXSU5iczc2enBSZ1l4b0psaVo5Q2Fr
+ZmQ1MWhYSnVkSWNpNnNibzZpRjdTakVhMHU1SjJxcUhFWGVRZjE0TFlrM3VaN25xZ3JkeGpBNUZH
+N01NV3BtVWFJeHYrTFA1ZHV0VVAxOURDL0xmZmNLTnFobnBvRzBSSVd1ZG1NcnA4WVA5Z1dYd0I0
+cDIyRGl0Ui9FKzJwUWhYUm1vcWhxT25QTDJ4SHVBU1I5c2o0ZTlJb2VzY0haSjhpSDNaaFVqNFZt
+Q1FQWDczNkpoem45dElmMlRnSkdjNkgwa05GRDBUd1AzTHZhM3hSK1hZb3JWUHVXU2tDQXdFQUFh
+TWRNQnN3REFZRFZSMFRBUUgvQkFJd0FEQUxCZ05WSFE4RUJBTUNCc0F3RFFZSktvWklodmNOQVFF
+TEJRQURnZ0lCQUt0bG5FSzl5dnZUUFQrZitvVDRFYUx3UmFSdERxbDlNRk1IVFc1OGYwdnFxQS9k
+S3FHdmJpc25pemdiNUMzUU5CUG5KdllOQTE1VzdTY3BQdnY0cG5LVDc5V2hoM1JVbWtIRTZLeTFV
+aFYzc250anUyM1BtZFRDZzFHU1BER0FsNG9RTnhFd1lrdmlJSGc4SzA1b09MN09PcVFZUEFJWXJP
+eVRZeHFSUG0xVlpBWFdBaXJvelkyMnJqdGR0UGlRV2pJNTFzMlNSS3k1NHFhbTU3aDFyc1JIazlY
+UlhueWJSb3hXc1ZiYUJicThRYXhKM0xicTJ2UWo4endHd2FyUm1qK0wzTVB5QkJ1cEtxbVF0S29M
+WWRvcWtaaXY4MEFDTnZuNm13VGRKQno5RitFWDNVN1R6dmRFckRMelhOSzJEV0x1ZHpuR2gxZXFF
+MGxUNTUzTlpyYnFGUU1iSEJYd3Y3UmpRb0JSNmd1R3ZLWm53Z3BiTlBsTWZGYzhJSEd6ZjEwMlVz
+Nmpkdzd3ZG9XcldkTnJEQ1A0YStBTkxCcFNHUERzRHhaRjFaWGRJYys4WkdPUmduaWZGYXNJQm5M
+eER3MGVsRkphVFlkQ2kwWDlDUmM3ZGJWKzdCWjdmaE5ISkJyUG04MkVkNVFvNENOUVp5aGJzd0t1
+SGdaUVVoTzlvZkNyd3VkU1ZMSzhreHY1Sjh2TUFoRHFMWktsZkh5TVdQSGErcU1ja29wcG9oNndO
+Q3ZrZTZTQlQzSThPeGZLU0ZCRDNWbzJidlZlc1ZxMy9zU2lkVGpIMGtuejFEaW0zcHRFdFpqK0NZ
+NVVCakNYNk9ocTg1UUZJdWd4ZU5YdFJFajIyVGd0VFJiSHhzZGRHa0hpRWxTTy9JZ3pLSGZ1Nzdj
+bDVVUDk0WVBRIiBOb0NlcnRpZmljYWRvPSIwMDAwMTAwMDAwMDUwNDEzMjA1NyIgU2VsbG89IldZ
+dU9OaXBncWlSQmlSU25LcU1FU1JIb1lSTjAvOE1ZeTdvcWtITzBDbmtQcGFtVXdkbXRUb2pGRlFu
+M1J0ZDFuTGs3bXU0YVV6NDNNZWdXWHk0NUdZZUd6K1VRLzlrbFhZbkdqOWhDZm9MelpEZ0xOQ1k2
+TXUyMzV0c2docWNaZ2dXZVBPcHVRT1JpNno3eVg5cEFORm9iQk1sUEZwZ3I2Mm5SZGhOS2JMcVB0
+dkx2c1lvTzI0VjJPZGRxRWtocGdFYk1LQ29sK0xlWjdXMnpWRk1mK3ZHSFp4bU8zWmFHRkpWd1JR
+SkpGdUxFSlpheEFsWnlsd1Q2RjVubDFVRFJoSjBOcXNnNW12aXNHNk1kWFc0andPdWtpTFRCMnZu
+TjVTamNzbTdncStleGRrbkl2NlkwclpDWWlBTm0rbkp0aU5Md3pkczMxMXJGODIybkYwY0lOdz09
+IiBUaXBvRGVDb21wcm9iYW50ZT0iSSIgVmVyc2lvbj0iMy4zIiBTZXJpZT0iQ1BGQSIgRm9saW89
+IjE2OTI4MDEwMSIgVG90YWw9IjM0NDYiIFN1YlRvdGFsPSIyOTcwLjY5IiBGZWNoYT0iMjAyMS0w
+OC0xN1QxMTowMDowNyIgTW9uZWRhPSJNWE4iIEx1Z2FyRXhwZWRpY2lvbj0iNDQ2MDAiIE1ldG9k
+b1BhZ289IlBVRSIgRm9ybWFQYWdvPSIwNCIgQ29uZGljaW9uZXNEZVBhZ289IlBhZ28gZGUgY29u
+dGFkbyI+PGNmZGk6RW1pc29yIFJmYz0iQ1lCMDgwNjAySlNBIiBOb21icmU9IkN5YmVycHVlcnRh
+IFMuQS4gZGUgQy5WLiIgUmVnaW1lbkZpc2NhbD0iNjAxIi8+PGNmZGk6UmVjZXB0b3IgUmZjPSJY
+QVhYMDEwMTAxMDAwIiBOb21icmU9IkpvcmdlIEdhcmNpYSBEZWxnYWRvIiBVc29DRkRJPSJHMDMi
+Lz48Y2ZkaTpDb25jZXB0b3M+PGNmZGk6Q29uY2VwdG8gQ2FudGlkYWQ9IjEiIERlc2NyaXBjaW9u
+PSJUZWNsYWRvIEdhbWVyIENvcnNhaXIgSzYwIFJHQiBQcm8sIFRlY2xhZG8gTWVjw6FuaWNvLCBD
+aGVycnkgVmlvbGEsIEFsw6FtYnJpY28sIFVTQiAoRXNwYcOxb2wpIiBDbGF2ZVByb2RTZXJ2PSI0
+MzIxMTcwMCIgQ2xhdmVVbmlkYWQ9Ikg4NyIgTm9JZGVudGlmaWNhY2lvbj0iQ0gtOTEwRDAxOS1T
+UCIgVW5pZGFkPSJQaWV6YXMiIEltcG9ydGU9IjEyNTcuNzU4NjIxIiBWYWxvclVuaXRhcmlvPSIx
+MjU3Ljc1ODYyMSI+PGNmZGk6SW1wdWVzdG9zPjxjZmRpOlRyYXNsYWRvcz48Y2ZkaTpUcmFzbGFk
+byBCYXNlPSIxMjU3Ljc1ODYyMSIgSW1wb3J0ZT0iMjAxLjI0MTM3OSIgSW1wdWVzdG89IjAwMiIg
+VGFzYU9DdW90YT0iMC4xNjAwMDAiIFRpcG9GYWN0b3I9IlRhc2EiLz48L2NmZGk6VHJhc2xhZG9z
+PjwvY2ZkaTpJbXB1ZXN0b3M+PC9jZmRpOkNvbmNlcHRvPjxjZmRpOkNvbmNlcHRvIENhbnRpZGFk
+PSIxIiBEZXNjcmlwY2lvbj0iTG9naXRlY2ggV2ViY2FtIEM1MDUsIDcyMHAsIDEyODAgeCA3MjAg
+UGl4ZWxlcywgVVNCLCBOZWdybyIgQ2xhdmVQcm9kU2Vydj0iNDUxMjE1MDAiIENsYXZlVW5pZGFk
+PSJIODciIE5vSWRlbnRpZmljYWNpb249Ijk2MC0wMDEzNjMiIFVuaWRhZD0iUGllemFzIiBJbXBv
+cnRlPSI1NjguMTAzNDQ4IiBWYWxvclVuaXRhcmlvPSI1NjguMTAzNDQ4Ij48Y2ZkaTpJbXB1ZXN0
+b3M+PGNmZGk6VHJhc2xhZG9zPjxjZmRpOlRyYXNsYWRvIEJhc2U9IjU2OC4xMDM0NDgiIEltcG9y
+dGU9IjkwLjg5NjU1MiIgSW1wdWVzdG89IjAwMiIgVGFzYU9DdW90YT0iMC4xNjAwMDAiIFRpcG9G
+YWN0b3I9IlRhc2EiLz48L2NmZGk6VHJhc2xhZG9zPjwvY2ZkaTpJbXB1ZXN0b3M+PC9jZmRpOkNv
+bmNlcHRvPjxjZmRpOkNvbmNlcHRvIENhbnRpZGFkPSIxIiBEZXNjcmlwY2lvbj0iTW91c2UgTWlj
+cm9zb2Z0IEJsdWVUcmFjayBBcmMsIDIgQm90b25lcywgSW5hbMOhbWJyaWNvLCBCbHVldG9vdGgs
+IE5lZ3JvIiBDbGF2ZVByb2RTZXJ2PSI0MzIxMTcwMCIgQ2xhdmVVbmlkYWQ9Ikg4NyIgTm9JZGVu
+dGlmaWNhY2lvbj0iRUxHLTAwMDExIiBVbmlkYWQ9IlBpZXphcyIgSW1wb3J0ZT0iMTAxNi4zNzkz
+MTAiIFZhbG9yVW5pdGFyaW89IjEwMTYuMzc5MzEwIj48Y2ZkaTpJbXB1ZXN0b3M+PGNmZGk6VHJh
+c2xhZG9zPjxjZmRpOlRyYXNsYWRvIEJhc2U9IjEwMTYuMzc5MzEwIiBJbXBvcnRlPSIxNjIuNjIw
+NjkwIiBJbXB1ZXN0bz0iMDAyIiBUYXNhT0N1b3RhPSIwLjE2MDAwMCIgVGlwb0ZhY3Rvcj0iVGFz
+YSIvPjwvY2ZkaTpUcmFzbGFkb3M+PC9jZmRpOkltcHVlc3Rvcz48L2NmZGk6Q29uY2VwdG8+PGNm
+ZGk6Q29uY2VwdG8gQ2FudGlkYWQ9IjEiIERlc2NyaXBjaW9uPSJDb3N0byBkZSBlbnbDrW8iIENs
+YXZlUHJvZFNlcnY9Ijc4MTAyMjAzIiBDbGF2ZVVuaWRhZD0iRTQ4IiBOb0lkZW50aWZpY2FjaW9u
+PSJlbnZpbyIgVW5pZGFkPSJTZXJ2aWNpbyIgSW1wb3J0ZT0iMTI4LjQ0ODI3NiIgVmFsb3JVbml0
+YXJpbz0iMTI4LjQ0ODI3NiI+PGNmZGk6SW1wdWVzdG9zPjxjZmRpOlRyYXNsYWRvcz48Y2ZkaTpU
+cmFzbGFkbyBCYXNlPSIxMjguNDQ4Mjc2IiBJbXBvcnRlPSIyMC41NTE3MjQiIEltcHVlc3RvPSIw
+MDIiIFRhc2FPQ3VvdGE9IjAuMTYwMDAwIiBUaXBvRmFjdG9yPSJUYXNhIi8+PC9jZmRpOlRyYXNs
+YWRvcz48L2NmZGk6SW1wdWVzdG9zPjwvY2ZkaTpDb25jZXB0bz48L2NmZGk6Q29uY2VwdG9zPjxj
+ZmRpOkltcHVlc3RvcyBUb3RhbEltcHVlc3Rvc1RyYXNsYWRhZG9zPSI0NzUuMzEiPjxjZmRpOlRy
+YXNsYWRvcz48Y2ZkaTpUcmFzbGFkbyBJbXBvcnRlPSI0NzUuMzEiIEltcHVlc3RvPSIwMDIiIFRh
+c2FPQ3VvdGE9IjAuMTYwMDAwIiBUaXBvRmFjdG9yPSJUYXNhIi8+PC9jZmRpOlRyYXNsYWRvcz48
+L2NmZGk6SW1wdWVzdG9zPjxjZmRpOkNvbXBsZW1lbnRvPgogICAgICAgIDx0ZmQ6VGltYnJlRmlz
+Y2FsRGlnaXRhbCB4bWxuczp0ZmQ9Imh0dHA6Ly93d3cuc2F0LmdvYi5teC9UaW1icmVGaXNjYWxE
+aWdpdGFsIiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly93d3cuc2F0LmdvYi5teC9UaW1icmVG
+aXNjYWxEaWdpdGFsIGh0dHA6Ly93d3cuc2F0LmdvYi5teC9zaXRpb19pbnRlcm5ldC9jZmQvVGlt
+YnJlRmlzY2FsRGlnaXRhbC9UaW1icmVGaXNjYWxEaWdpdGFsdjExLnhzZCIgVmVyc2lvbj0iMS4x
+IiBVVUlEPSJkNDFlYjhjNS0yYWM3LTRiYmQtODBmMC0wOTkzZDFhYjc5OGIiIFJmY1Byb3ZDZXJ0
+aWY9IlNORjE3MTAyMEYzQSIgRmVjaGFUaW1icmFkbz0iMjAyMS0wOC0xN1QxMToxMToxNiIgU2Vs
+bG9DRkQ9IldZdU9OaXBncWlSQmlSU25LcU1FU1JIb1lSTjAvOE1ZeTdvcWtITzBDbmtQcGFtVXdk
+bXRUb2pGRlFuM1J0ZDFuTGs3bXU0YVV6NDNNZWdXWHk0NUdZZUd6K1VRLzlrbFhZbkdqOWhDZm9M
+elpEZ0xOQ1k2TXUyMzV0c2docWNaZ2dXZVBPcHVRT1JpNno3eVg5cEFORm9iQk1sUEZwZ3I2Mm5S
+ZGhOS2JMcVB0dkx2c1lvTzI0VjJPZGRxRWtocGdFYk1LQ29sK0xlWjdXMnpWRk1mK3ZHSFp4bU8z
+WmFHRkpWd1JRSkpGdUxFSlpheEFsWnlsd1Q2RjVubDFVRFJoSjBOcXNnNW12aXNHNk1kWFc0andP
+dWtpTFRCMnZuTjVTamNzbTdncStleGRrbkl2NlkwclpDWWlBTm0rbkp0aU5Md3pkczMxMXJGODIy
+bkYwY0lOdz09IiBOb0NlcnRpZmljYWRvU0FUPSIwMDAwMTAwMDAwMDQxNDIxMTM4MCIgU2VsbG9T
+QVQ9ImlpcDU4U204ZFRrNTluVUE4Y3VldUxsbHFNbnJxWW5jK09vcWtoc2JDNXZrZzNJLytwWXdw
+YS92TU4xMENTOVFzSTFKbytLV25RZi9EMnZxY0hTQ1VRY1hMd2g5a09QdVJTeVkxRFlPMUlnOVBw
+aVBRMklOank3dElzSEpNODJ1WlZDRnlOUkVvV09MR0JZUUNoYkJ3U0Y0YnlTU1E3TFFKQmJXYVJR
+OEM0M3h4L0ZEeE5MRkZlNGkrMTBINjdpVHM5UFR4eVlONDZjbjEvOU1ubWJMK0U0cG1XU29leW9Z
+cGp4TlRwNlZZRkkrNHg5YzYvejdVRG5jUFBzMHR5RHBoMzczRjZUc2ZuZURFdTBhNElCbGV4aDc5
+eHZ1WFp5eElhRk9rRmZJRjJXcjAxbGZsYVpkQWVBR2gwUGFEUG5nbm91NXBCc2NZWGlLMU1ESkJE
+MzNldz09Ii8+CiAgICA8L2NmZGk6Q29tcGxlbWVudG8+PC9jZmRpOkNvbXByb2JhbnRlPg==
+
+--1134301278611bdfa6ef2b3
+Content-Type: application/octet-stream
+Content-Disposition: attachment; filename="4521ec30741e1e0c331204ca186d1080_CPFA169280101.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjcKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZwovT3V0bGluZXMgMiAwIFIKL1BhZ2Vz
+IDMgMCBSID4+CmVuZG9iagoyIDAgb2JqCjw8IC9UeXBlIC9PdXRsaW5lcyAvQ291bnQgMCA+Pgpl
+bmRvYmoKMyAwIG9iago8PCAvVHlwZSAvUGFnZXMKL0tpZHMgWzYgMCBSCl0KL0NvdW50IDEKL1Jl
+c291cmNlcyA8PAovUHJvY1NldCA0IDAgUgovRm9udCA8PCAKL0YxIDggMCBSCi9GMiA5IDAgUgo+
+PgovWE9iamVjdCA8PCAKL0kxIDExIDAgUgovSTIgMTMgMCBSCi9JMyAxNCAwIFIKPj4KPj4KL01l
+ZGlhQm94IFswLjAwMCAwLjAwMCA4MTYuMDAwIDEwNTYuMDAwXQogPj4KZW5kb2JqCjQgMCBvYmoK
+Wy9QREYgL1RleHQgL0ltYWdlQyBdCmVuZG9iago1IDAgb2JqCjw8Ci9Qcm9kdWNlciAo/v8AZABv
+AG0AcABkAGYAIAAwAC4AOAAuADYACgAgACsAIABDAFAARABGKQovQ3JlYXRpb25EYXRlIChEOjIw
+MjEwODE3MTExMTE4LTA1JzAwJykKL01vZERhdGUgKEQ6MjAyMTA4MTcxMTExMTgtMDUnMDAnKQov
+VGl0bGUgKP7/AEQAbwBjAHUAbQBlAG4AdABvACAAcwBpAG4AIAB0AO0AdAB1AGwAbykKPj4KZW5k
+b2JqCjYgMCBvYmoKPDwgL1R5cGUgL1BhZ2UKL01lZGlhQm94IFswLjAwMCAwLjAwMCA4MTYuMDAw
+IDEwNTYuMDAwXQovUGFyZW50IDMgMCBSCi9Db250ZW50cyA3IDAgUgo+PgplbmRvYmoKNyAwIG9i
+ago8PCAvRmlsdGVyIC9GbGF0ZURlY29kZQovTGVuZ3RoIDMyMjIgPj4Kc3RyZWFtCnicvVpLc+JI
+Er73r6jLRsyEbbmqVA+pI+YAAtm4eRnwA8/MQQgZqy0kLIENDv/ZOfZhDht729OmMA/JFFh92Gl3
+EJBBpur7KuvLTIkvWDMNjLDGDAGvmAgUj76Ue0hnyw8GMTVOCOoN0alNEdE1jHr3CP3+S8dzvck0
+in/9E/UuULX3BSLhNMb2tXMGRknRC8LoAv2O0J/wZvgFQutSIMnSq0rEhaEZpkCCa5xiFHuoq4gF
+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
+GPgQKsNAkW6sGCNrtBlGpNSwmdV7hWXDURFGDEgjXSgY8dwHZ6dgF6cnHzdDz7oPzfSWBdlYIc2w
+AY2HlDiLfdey4acIGwKSiagqxJqN6thPfoqHfMS9PGD8FRfUizXGDA9MaNBfZFHvWjbMFOGBU003
+9V0eev5kOcFYMNDE0cAJpwV+wLThIh81w0UtvTkYjqBXi7ItqYmhAXtvSQFP+nb1EzoTGlJM2XtD
+qr83pHtv8qxcoA+TYtvNZX5Zshh48WQGae6grlZ6/1GSdp37pcc6CJVAq+p25PuP2JDVL2MDC0wv
+uiWVP05vozOV/4+RD50sspf3vr4qfA2DA4uqW/kCCtIJ6njvEWD1dW/x/tubOIlCJ0GNKE7vp6mC
+8vThiepu4DU4p30BdP5rv/8BmK2j9gplbmRzdHJlYW0KZW5kb2JqCjggMCBvYmoKPDwgL1R5cGUg
+L0ZvbnQKL1N1YnR5cGUgL1R5cGUxCi9OYW1lIC9GMQovQmFzZUZvbnQgL0hlbHZldGljYQovRW5j
+b2RpbmcgL1dpbkFuc2lFbmNvZGluZwo+PgplbmRvYmoKOSAwIG9iago8PCAvVHlwZSAvRm9udAov
+U3VidHlwZSAvVHlwZTEKL05hbWUgL0YyCi9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQKL0VuY29k
+aW5nIC9XaW5BbnNpRW5jb2RpbmcKPj4KZW5kb2JqCjEwIDAgb2JqCls2IDAgUiAvRml0XQplbmRv
+YmoKMTEgMCBvYmoKPDwKL1R5cGUgL1hPYmplY3QKL1N1YnR5cGUgL0ltYWdlCi9XaWR0aCAxNDcK
+L0hlaWdodCAxNDcKL0ZpbHRlciAvRmxhdGVEZWNvZGUKL0RlY29kZVBhcm1zIDw8IC9QcmVkaWN0
+b3IgMTUgL0NvbG9ycyAxIC9Db2x1bW5zIDE0NyAvQml0c1BlckNvbXBvbmVudCAxPj4KL0NvbG9y
+U3BhY2UgIFsgL0luZGV4ZWQgL0RldmljZVJHQiAxIDEyIDAgUiBdCi9CaXRzUGVyQ29tcG9uZW50
+IDEKL0xlbmd0aCA2MDY+PgpzdHJlYW0KSInFlrEN7CwQhNdyQGY3YIk2yGjJbgDsBuyWyGgDiQbs
+jADdvsGnd8mfLMn/Tief7wtWMLOzQPyfT6L/g1UifdJCNJ40XpFIdTDPy1bybtIQ82k1xw62Kn0w
+PzE5kya7DH1smVRdKX+wKNXL9FPGD9Fqx7uTYR9zyE+sPmbm395EjGjZ4u/7V1MRa07tho9YHVWn
+fl5KWCVFeL0CkR2vAvk7mFN1YILnV1MiTaqDeQDFp+Hb8sHjbjsYWYDkQ4ZpE6WN5Yw/hhyloZCP
+I7Rv+xCz0+ZdaS58lMUpGChndTI0FH5Cgoq7GR/uYKvJe3vqD6HRlrcPhIxvMyIfWBG0x4refchZ
+vg1NMDxAP96VnNU50FZgGhzj3erbyhn+oV4aGIbTHNE7PQyJNHVA1YhYk7NyVjEMNsb0wgt8Q8Q7
+mI8LBDji4kvGc+YOtiIfATMM9bCcbz0pm5Ar0jsR6uH51pOyLaBeWgmtOnLMt5Kzlo8VrR0gJJo9
+f2wHw+DZor5KJVMnSwPLWRsk8AoytHlQko9yxhd+A+otM4SP79wVs1PRRPrhjHA8Jb09JGTVB7R2
+QptDeKe+fS9lhBkQsPXWcRgnnjvYxi3W6HSsiMN3DgkZc0SPjE/RT4Bv/PVNyHZkAtHEpDfVme8c
+EjKcFbgLwLd2XGBDr5dChn5BvDRyuRr4UOcO1s7VFV0Tl9W+9wLbwTzrD6L55hJzaIsdDDXmoI9m
+XWbsg/sYBHCY2e35u9NImY9I5/hEPlpKOhjuLw6qxzZUhlDfs1bKoN8E5SzuIAjW4qyc/aM78B/k
+2iXhCmVuZHN0cmVhbQplbmRvYmoKMTIgMCBvYmoKPDwgL0ZpbHRlciAvRmxhdGVEZWNvZGUKL0xl
+bmd0aCAxNCA+PgpzdHJlYW0KeJxjYGD4//8/AAYAAv4KZW5kc3RyZWFtCmVuZG9iagoxMyAwIG9i
+ago8PAovVHlwZSAvWE9iamVjdAovU3VidHlwZSAvSW1hZ2UKL1dpZHRoIDI2MAovSGVpZ2h0IDY1
+Ci9GaWx0ZXIgL0ZsYXRlRGVjb2RlCi9EZWNvZGVQYXJtcyA8PCAvUHJlZGljdG9yIDE1IC9Db2xv
+cnMgMSAvQ29sdW1ucyAyNjAgL0JpdHNQZXJDb21wb25lbnQgOD4+Ci9Db2xvclNwYWNlIC9EZXZp
+Y2VHcmF5Ci9CaXRzUGVyQ29tcG9uZW50IDgKL0xlbmd0aCAyNDE4Pj4Kc3RyZWFtCnic7ZsPUBTX
+HcffAQKK5Y+aWBExKGOFKpKgNLam1TK2RqtFAzTFiWKqQYmNJFaqNrUXOkRlMAFDxhSrUVItlWio
+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
+upwNPtOR99iHNhmqlwOdHolPk4YPLkuR6YNAkk6oN46Hh+jt0U4Q5J8y2NKxPs0ZZF2wNghBdfKz
+utNo7TPOkRiJOgSGUQpGDmG8JgbdPJbAxy4p2uqns6b9UHqJWyKEDMeL/2+kB9wDV2Rn/xVWDFog
+kHDZjNs8T6pdJUPatZz/Wd1BICsd0+zGZXII2t5KX5T/STL2d/KG5i38iZkKZYvjReWhDlERI3bR
+KG/tcHwQOWQzQ2N/G+eWJBZM9/D27A48VQGBBOaxcWzbN9ZRO76adc2yYwxWzIGTV0jN06AkLeMm
+vk6vy9vlEVi/UbIq1gJhn3M4oVOWFpZtL16/IFZWicP1eWXk4pQmc93mgrlhTnUh01c9u7ngoaGu
+1j0q4AcrNmxek6HYeY6a9/violUzNO2ER2f/8bl1WS574PF2TwRE5Xh2j/cd8zDPhnek9nhm4Do0
+XWTAO2ZRH8TrE8V19dR/3BDa6NnLrxDWt/dz8GU9QYD92gueX0UH4epQZUv+W6Gevt06LwhXEjy7
+yAPb9r768tInympRhVAv1MV6dhCG07jVvo/Ulxow5wU3+16i6nLTtJz/B7D9YqCvw/S97p6/6c12
+BYOOsZ7PEzUUN9XyfBxgnyk2vbDmPJ/wX9T4Px1KwLhZ18fcd6xCkxcW1Zz872tLNI7vUbjJmuPT
+mPrVr371q193oP4HRcDGSAplbmRzdHJlYW0KZW5kb2JqCjE0IDAgb2JqCjw8Ci9UeXBlIC9YT2Jq
+ZWN0Ci9TdWJ0eXBlIC9JbWFnZQovV2lkdGggMjYwCi9IZWlnaHQgNjUKL1NNYXNrIDEzIDAgUgov
+RmlsdGVyIC9GbGF0ZURlY29kZQovRGVjb2RlUGFybXMgPDwgL1ByZWRpY3RvciAxNSAvQ29sb3Jz
+IDEgL0NvbHVtbnMgMjYwIC9CaXRzUGVyQ29tcG9uZW50IDg+PgovQ29sb3JTcGFjZSAgWyAvSW5k
+ZXhlZCAvRGV2aWNlUkdCIDUwIDE1IDAgUiBdCi9CaXRzUGVyQ29tcG9uZW50IDgKL0xlbmd0aCA4
+MzA+PgpzdHJlYW0KeJztmmd72zAMhMm6I23TdO+R7r3//4+ra6uOABwGSdlqJN0niQQPx9eKJD9x
+SosWLVo0c+VOY+cYT7mnsbOMpEw1dpwRlLkurMaOdGAJAmtdXK1mhAERWOvSaj4UFAQ5X17NhYKK
+YC0NwtTumRaDLYSVXu+4NuepMWjtKXSFQxAVpu0QgWo8GlsyHVEIqMTyHSRR1b6aOloQcIllPEyk
+yr01dNQhKCWW8UCRandX35Ho6hkEluuQEPZLwWOQr+0goEj7hEB61viUNiyCwA0s54ZMNGCNUWHD
+AATtQ9kzhIS7lnnFGuq6ziEM2t7K1G4UXexCOO4glDKYMoSB21uZ2o2ii6MQihlMCsKNsSGUdy5O
+4UI4GRlCLu9cnKIMgp+Ze8Ina2aDtJQY0jD99baZFJmj+9F336kRgrYFnM2ThCCn9bXBRJ1u3rq9
+O/Yh4BuZugcwyAbQShkamZkQtEBwyZ2799L9Bw+7syEhwJAtEFADoz3MA5c8eryZePJ0exqAAO9k
+2ndBNGidkmUuBHjR61IhPOtmnm9PmyGQNmRU5E7bbyIoqgydkmeW+1cQjqNBeNHNnMYh9CnwMKyC
+jMJB/ESwINAK1JfX4rOeXnYzrwAEhwKAwCvQdhUISgMBIdJBi6NBeP1mM/H2XTkE8jlYEKhwqQ8B
+eWkQuKcDIb//8DF9+twxYBDcS+GsipfDyAeGYPlZOol9i2RJ/nsIJF4phBAF0WUqEHQK8t1NxlZu
+W2iHpRBEnBAE6VcEQe6AOxk7A6P1EOQ6D0L8xqhAELvcrY9A+DdFHUjCMITdMWihQVDiFEPo11o8
+rT50lA4GILA/tICZWVsDQSt28NKm6JBtmtny2NKgf5N0IIjjEIQv8X/IojNRiQbpQvw0hl19M6s2
+DuG4D0F5KsHsWqGbOwZBHUUpzEDFEHyeRiWeUFdSCEmsUkbRvJPIpfDV+6WKFl3tGHylUF4A+Jxj
+Rs6qIXwDv9xCYZRXF/c2VyK8rMQswBfpCEAosD8nciB8j0E43wwcCD9mcSE4FH7O4kJINoVf87gQ
+kknh91wYWBRiP+6eBIS/whBKlu454MFUxWBqEDZaGCxatGjRopD+AMPMHGgKZW5kc3RyZWFtCmVu
+ZG9iagoxNSAwIG9iago8PCAvRmlsdGVyIC9GbGF0ZURlY29kZQovTGVuZ3RoIDE2NCA+PgpzdHJl
+YW0KeJwBmQBm/////wBgqgB1tOjn5wB+twBqrwBjrN7h5Nnf49HZ4MvW38PR3bzO3LXK2q3F2ABp
+rwB2tgBorwB+ub7X6f7+//3+/rXT6AB5twB6uPH2+uvz+AB0tZ/G4ZG93MTc7LbS6JK/3IG11wBx
+s+Tv99zq9ABssQBwspTA3efw+OTv9o+827LI2cjU3s/Z4Ofm5wBnrgB4tEeSwajD1+LLaF4KZW5k
+c3RyZWFtCmVuZG9iagp4cmVmCjAgMTYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDA5IDAw
+MDAwIG4gCjAwMDAwMDAwNzQgMDAwMDAgbiAKMDAwMDAwMDEyMCAwMDAwMCBuIAowMDAwMDAwMzM0
+IDAwMDAwIG4gCjAwMDAwMDAzNzEgMDAwMDAgbiAKMDAwMDAwMDU3NCAwMDAwMCBuIAowMDAwMDAw
+Njc4IDAwMDAwIG4gCjAwMDAwMDM5NzMgMDAwMDAgbiAKMDAwMDAwNDA4MCAwMDAwMCBuIAowMDAw
+MDA0MTkyIDAwMDAwIG4gCjAwMDAwMDQyMjEgMDAwMDAgbiAKMDAwMDAwNTA5NCAwMDAwMCBuIAow
+MDAwMDA1MTgwIDAwMDAwIG4gCjAwMDAwMDc4NDMgMDAwMDAgbiAKMDAwMDAwODk1NCAwMDAwMCBu
+IAp0cmFpbGVyCjw8Ci9TaXplIDE2Ci9Sb290IDEgMCBSCi9JbmZvIDUgMCBSCi9JRFs8NTk2ZWY0
+ZmE5YzY2MzQ2N2Q3ZjU0MWYyMTIzNGYwNjU+PDU5NmVmNGZhOWM2NjM0NjdkN2Y1NDFmMjEyMzRm
+MDY1Pl0KPj4Kc3RhcnR4cmVmCjkxOTEKJSVFT0YK
+
+--1134301278611bdfa6ef2b3--

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import HomeDashboard from "../dashboards/Home";
-import PriceListDashboard from "../dashboards/PriceList";
+import HomeDashboard from "../pages/Home";
+import PriceListDashboard from "../pages/PriceList";
 
 export default function MainNavigator(props: any) {
     return (

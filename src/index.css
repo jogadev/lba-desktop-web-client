@@ -59,3 +59,8 @@
 html, body, #root{
     height: 100%;
 }
+
+.x-radio-group > input[type='radio']:checked + label > span {
+    @apply border-orange-500;
+    @apply bg-orange-500
+}

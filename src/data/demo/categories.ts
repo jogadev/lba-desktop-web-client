@@ -25,3 +25,11 @@ export const categoriesData: Category[] = [
         id: "FRUTAS_SECAS_OTROS"
     }
 ];
+
+export const tags = {
+    VIVERES: "VIVERES",
+    ESPECIAS: "ESPECIAS_CONDIMENTOS",
+    CHILES: "CHILES_SECOS",
+    SECOS: "FRUTAS_SECAS_OTROS",
+    CERVEZA: "CERVEZA"
+}

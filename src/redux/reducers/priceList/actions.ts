@@ -1,3 +1,4 @@
 export const UPDATE_LIST = "PL_UPDATE_LIST";
 export const ACTIVATE_FILTER = "PL_ACTIVATE_FILTER";
 export const CLEAR_FILTER = "PL_CLEAR_FILTER";
+export const HIDE_LIST = "PL_HIDE_LIST";
